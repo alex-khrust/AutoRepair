@@ -1,0 +1,486 @@
+.sidebar
+  color: $grey !important
+  background: #fff
+  hr
+    width: 100%
+    height: 1px
+    display: inline-block
+    position: relative
+    padding-bottom: 1px
+    margin: 30px 0 5px
+    &:after
+      content: ''
+      position: absolute
+      top: 1px
+      left: 0
+      width: 100%
+      height: 1px
+      background: $light-grey
+.sidebar-title
+  font-weight: bold
+  font-size: 18px !important
+  color: #000
+  letter-spacing: 2px
+
+.sidebar__search
+  width: 100%
+  height: 40px
+  margin-bottom: 40px
+  position: relative
+  .input-search
+    width: 100%
+    height: 40px
+    border: none
+    border-bottom: 1px solid $light-grey
+    background-color: #fff
+    font-weight: bold
+    color: $grey
+    letter-spacing: 2px
+  .btn-search
+    position: absolute
+    top: 0
+    right: 0
+    padding: 7px 0 7px 22px
+    font-size: 16px
+    color: $grey
+    &:hover
+      color: $red
+
+
+
+
+.sidebar__filters--year
+.chbx-list
+  width: 100%
+  height: auto
+  display: inline-block
+  margin: 5px 0
+.wrap-chbx
+  width: 100%
+  height: auto
+  position: relative
+  display: inline-block
+  margin: 5px 0
+  label
+    color: $grey
+    font-weight: bold
+
+input[type=checkbox]
+  width: 22px
+  height: 22px
+  position: absolute
+  z-index: -1
+  opacity: 0
+input[type=checkbox] + label
+  width: auto
+  height: 22px
+  line-height: 22px
+  position: relative
+  padding: 0 36px 0 36px
+  cursor: pointer
+  margin: 0
+  &:last-child
+    padding-right: 0
+  &:before
+    content: ""
+    display: inline-block
+    width: 22px
+    height: 22px
+    position: absolute
+    left: 0
+    top: 50%
+    transform: translateY(-50%)
+    border: 1px solid $light-grey
+input[type=checkbox]:checked + label:before
+  content: ''
+  position: absolute
+  left: 0
+  width: 22px
+  height: 22px
+  display: inline-block
+  border: 1px solid $light-grey
+
+input[type=checkbox]:checked + label:after
+  content: ''
+  position: absolute
+  top: 4px
+  left: 8px
+  width: 7px
+  height: 11px
+  transform: rotate(45deg)
+  border-right: 2px solid $red
+  border-bottom: 2px solid $red
+
+
+
+
+.sidebar__filters--model
+
+
+.customSelect
+  position: relative
+  display: inline-block
+  border-bottom: 1px solid $light-grey
+  margin-bottom: 10px
+  cursor: pointer
+  &:after
+    content: ''
+    position: absolute
+    top: 50%
+    right: 0
+    width: 10px
+    height: 6px
+    //transform: translateY(-50%)
+    border: 5px solid transparent
+    border-top: 6px solid $grey
+
+select, .customSelect, .select-selected
+  width: 100%
+  height: 40px
+  background-color: #fff
+  font-weight: bold
+  color: $grey
+  letter-spacing: 2px
+  line-height: 40px
+  border-bottom: 1px solid $light-grey
+
+select
+  padding: 10px 0
+  border-top: none
+  border-left: none
+  border-right: none
+  border-bottom: 1px solid $light-grey
+  outline: none
+  -webkit-appearance: none
+  -moz-appearance: none
+  appearance: none
+  option:disabled
+    text-align: center
+
+select > .placeholder
+  display: none
+
+/*hide original SELECT element: */
+.customSelect select
+  display: none
+
+//.select-selected
+//  background-color: DodgerBlue
+
+/* Style the arrow inside the select element: */
+//.select-selected:after
+//  position: absolute
+//  content: ""
+//  top: 14px
+//  right: 10px
+//  width: 0
+//  height: 0
+//  border: 6px solid transparent
+//  border-color: #fff transparent transparent transparent
+//
+///* Point the arrow upwards when the select box is open (active): */
+//.select-selected.select-arrow-active:after
+//  border-color: transparent transparent #fff transparent
+//  top: 7px
+//
+///* style the items (options), including the selected item: */
+//.select-items div,.select-selected
+//  color: #ffffff
+//  padding: 8px 16px
+//  border: 1px solid transparent
+//  border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent
+//  cursor: pointer
+
+/* Style items (options): */
+.select-items
+  position: absolute
+  padding: 10px 15px
+  background-color: #fff
+  top: 100%
+  left: 0
+  right: 0
+  z-index: 99
+  line-height: 22px
+  border: 1px solid $light-grey
+
+.select-hide
+  display: none
+
+.select-items div:hover,
+.same-as-selected
+  color: #222
+
+.sidebar__filters--btn
+  margin: 20px 0 10px
+
+.sidebar__filters--cost
+  color: $grey !important
+  input
+    width: 100%
+    max-width: 95px
+    height: 44px
+    font-size: 14px
+    padding: 5px
+    text-align: center
+    border: 1px solid $light-grey
+    background: #fff
+    color: $grey
+    margin: 0 10px
+  label
+    font-weight: bold
+  span
+    margin: 0 5px
+  @media (max-width: 992px)
+    input
+      margin: 0
+    label
+      margin-right: 5px
+
+  #slider-range
+    width: 100%
+    color: $grey
+
+  .ui-slider
+    position: relative
+    margin-bottom: 21px
+  .ui-slider .ui-slider-handle
+    width: 21px
+    height: 21px
+    position: absolute
+    z-index: 2
+    cursor: pointer
+    border-radius: 50%
+    display: inline-block
+    background: $red
+    box-shadow: inset 0 0 0 1px rgb(228, 228, 228), inset 0 0 0 5px rgb(255, 255, 255), inset 0 0 0 6px rgb(228, 228, 228)
+    &:hover, &:focus
+      outline: none
+  .ui-slider .ui-slider-range
+    position: absolute
+    z-index: 1
+    font-size: .7em
+    display: block
+    border: 0
+    overflow: hidden
+  .ui-slider-horizontal
+    height: 11px
+  .ui-slider-horizontal .ui-slider-handle
+    top: -6px
+    margin-left: -11px
+  .ui-slider-horizontal .ui-slider-range
+    top: 0
+    height: 100%
+  .ui-slider-horizontal .ui-slider-range-min
+    left: 0
+  .ui-slider-horizontal .ui-slider-range-max
+    right: 0
+  .ui-widget-content
+    border: 1px solid  rgb(228, 228, 228)
+    background-color: rgb(250, 250, 250)
+  .ui-widget-header
+    border: 1px solid  rgb(228, 228, 228)
+    background: $red
+    //.ui-corner-all
+
+.sidebar__product--categories,
+.sidebar__blog--categories
+  ul
+    padding-left: 17px
+  li
+    list-style: disc !important
+    color: $grey !important
+    margin-bottom: 15px
+    cursor: pointer
+    transition: .3s
+    &:hover
+      color: $red !important
+      a
+        color: $red !important
+    &:last-child
+      margin-bottom: 0
+    a
+      font-weight: bold
+      color: $grey !important
+      text-decoration: none
+
+.sidebar__product--top_rated,
+.related-products-slider,
+.sidebar__blog-list
+  .products-list__item
+    width: 100%
+    height: auto
+    max-height: 123px
+    display: flex
+    flex-flow: row
+    justify-content: space-between
+    @media (max-width: 414px)
+      flex-flow: column
+      align-items: center
+      max-height: initial !important
+      margin-bottom: 25px
+      &:last-child
+        margin-bottom: 0
+    &:hover
+      .item-title,
+      .price
+        color: $red
+    &--img
+      width: 100%
+      height: 100%
+      max-width: 190px
+      max-height: 123px
+      border: 1px solid $light-grey
+      img
+        max-width: 190px
+        max-height: 123px
+        object-fit: cover
+    &--description
+      width: 100%
+      height: 123px
+      max-width: 190px
+      display: flex
+      flex-flow: column
+  .item-title-link
+    text-decoration: none
+    &:hover
+      .item-title
+        color: $red
+  .item-title
+    margin-top: 0
+  .item-text
+    display: inline-block
+    p
+      width: auto
+      white-space: normal
+      overflow: visible
+      text-overflow: unset
+    .more
+      margin-left: 5px
+      line-height: 1.714
+  .price
+    font-size: 32px
+    font-weight: bold
+    color: #000
+    justify-self: flex-end
+    line-height: 1
+    margin-top: auto
+    transition: .3s
+
+
+
+.sidebar__blog--categories
+  .sidebar-title
+    margin-top: 0
+
+
+.sidebar__blog-list
+  .products-list__item
+    max-height: 97px
+    &--img
+      max-width: 187px
+      max-height: 98px
+      img
+        max-width: 187px
+        max-height: 96px
+        object-fit: cover
+    .item-title
+      margin-bottom: 15px
+
+
+.sidebar__blog--tags
+  ul
+    width: 100%
+    height: auto
+    display: block
+    margin: -5px
+  li
+  a
+    margin: 5px
+    font-weight: bold
+    letter-spacing: 2px
+    color: $grey
+    text-decoration: none
+    display: block
+    padding: 12px 20px
+    border: 1px solid $light-grey
+    float: left
+    &:hover
+      border-color: $red
+      color: $red
+
+
+
+@media (max-width: 767px)
+  .sidebar
+    width: 100%
+    min-width: 290px
+    max-width: 423px
+    position: fixed
+    z-index: 9999
+    height: 100vh
+    top: 0
+    right: -423px
+    overflow-x: hidden
+    overflow-y: auto
+    padding: 0 15px 15px
+    transition: 0.5s
+
+.sidebar.active
+  right: 0
+
+.sidebar .closebtn
+  width: 40px
+  height: 40px
+  display: none
+  position: relative
+  font-size: 40px
+  font-weight: bold
+  line-height: 40px
+  color: #000
+  text-decoration: none
+  z-index: 111
+  margin-top: 7px
+  margin-bottom: 20px
+  &:hover
+    color: $red
+  @media (max-width: 767px)
+    display: flex
+
+.openbtn
+  font-size: 20px
+  cursor: pointer
+  color: #fff
+  background-color: #b4b4b4
+  padding: 10px 15px
+  border: none
+  display: none
+  justify-content: center
+  align-items: center
+  text-decoration: none
+  text-transform: uppercase
+  font-weight: bold
+  letter-spacing: 2px
+  margin-bottom: 40px
+  margin-left: auto
+  &:hover
+    background-color: #000
+  @media (max-width: 767px)
+    display: flex
+
+
+.overlay
+  display: none
+  position: fixed
+  top: 0
+  left: 0
+  width: 100vw
+  height: 100vh
+  background: rgba(0, 0, 0, 0.7)
+  z-index: 100
+  opacity: 0
+  transition: 0.5s ease-in-out
+
+.overlay.active
+  display: block
+  opacity: 1
+

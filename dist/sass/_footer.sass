@@ -1,0 +1,187 @@
+footer
+  width: 100%
+  height: auto
+  background: #1c1c1c
+  margin-top: auto
+
+.footer-socials
+  width: 100%
+  height: 141px
+  background-color: $red
+  .container
+    height: 100%
+  .row
+    height: 100%
+  &__list
+    width: 100%
+    height: 100%
+    display: flex
+    justify-content: center
+    align-items: center
+    &--item
+      a
+        display: flex
+        justify-content: center
+        align-items: center
+        padding: 15px
+        margin: 5px
+      .svg-inline--fa
+        width: auto
+        height: 25px
+      svg path
+        fill: #fff
+        transition: .3s
+      &:hover
+        svg path
+          fill: #000
+  @media (max-width: 768px)
+    height: 60px
+    .row
+      display: flex
+      justify-content: center
+    .footer-socials__list
+      max-width: 400px
+      justify-content: space-between
+    .footer-socials__list--item
+      a
+        padding: 5px
+        margin: 5px
+        .svg-inline--fa
+          width: auto
+          height: 20px
+
+
+.footer-map
+  width: 100%
+  height: auto
+#map
+  width: 100%
+  height: 460px
+  background-color: $grey
+  @media (max-width: 768px)
+    height: 200px
+
+
+.footer-info
+  width: 100%
+  height: auto
+  padding: 70px 0 55px
+  color: $grey
+  .footer-info--title
+    color: #fff
+    margin-bottom: 30px
+    text-align: left
+  .inner
+    width: 287.5px
+    height: auto
+    //display: flex
+    //justify-content: center
+    //overflow: hidden
+    margin: 0 auto 30px
+    .more
+  .footer-info--text
+    overflow: hidden
+    text-overflow: ellipsis
+    line-height: 1.714
+  .contacts
+    .info
+      width: 100%
+      height: 110px
+    li
+      height: 14px
+      line-height: 14px
+    svg
+      margin-right: 20px
+    a
+      padding: 0
+    a:hover
+      color: $red
+      text-decoration: underline
+  @media (max-width: 768px)
+    display: none
+
+
+
+.footer__gallery
+  width: 100%
+  height: 100%
+  display: flex
+  justify-content: space-between
+  flex-flow: row wrap
+  &--item
+    width: 60px
+    height: 50px
+    overflow: hidden
+    margin-bottom: 10px
+    a
+      width: 100%
+      height: 100%
+      display: block
+      position: relative
+      &:hover
+        &:before,
+        &:after
+          opacity: 1
+      &:before
+        content: ''
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        background: rgba(0,0,0,.7)
+        opacity: 0
+        transition: .3s
+      &:after
+        content: ''
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        display: flex
+        justify-content: center
+        align-items: center
+        z-index: 10
+        background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='30px' height='30px'%3E%3Cpath fill-rule='evenodd' fill='rgb(221, 51, 51)' d='M30.000,16.000 L16.000,16.000 L16.000,30.000 L14.000,30.000 L14.000,16.000 L-0.000,16.000 L-0.000,13.999 L14.000,13.999 L14.000,-0.001 L16.000,-0.001 L16.000,13.999 L30.000,13.999 L30.000,16.000 Z'/%3E%3C/svg%3E") no-repeat center
+        opacity: 0
+        transition: .3s
+    img
+      width: 100%
+      height: auto
+      line-height: 0
+      display: block
+      object-fit: cover
+
+
+
+
+.footer-copyright
+  width: 100%
+  height: 61px
+  background-color: rgb(0, 0, 0)
+  display: flex
+  justify-content: center
+  align-items: center
+  color: #fff
+  font-size: 12px
+
+
+.footer__menu
+  width: 100%
+  height: auto
+  padding: 10px 0
+  display: flex
+  flex-flow: row wrap
+  justify-content: space-around
+  &--link, a
+    font-size: 16px
+    font-weight: bold
+    color: #fff
+    margin: 10px 15px
+    text-decoration: none
+    &:hover, &:focus
+      color: $red
+  @media (min-width: 768px)
+    display: none
+

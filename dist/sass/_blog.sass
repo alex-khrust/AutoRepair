@@ -1,0 +1,153 @@
+.blog-page
+  width: 100%
+  height: auto
+  background: #fff
+
+.blog-page__list
+
+.blog-page__list--item
+  flex-flow: column
+  margin-bottom: 55px
+  .blog-img
+    margin-bottom: 28px
+    img
+      width: 100%
+      height: auto
+      max-height: 357px
+      object-fit: cover
+      border: 1px solid $light-grey
+  .blog-content
+    width: 100%
+    height: auto
+    min-height: 92px
+    display: flex
+    @media (max-width: 576px)
+      flex-flow: column
+      align-items: flex-start !important
+    .blog-date
+      margin-right: 25px
+    .blog-text
+      width: 100%
+      height: auto
+      display: flex
+      flex-flow: column
+      color: $grey
+      line-height: 24px
+      p
+        margin-bottom: 0
+      .blog-link
+        text-decoration: none
+        color: #000
+        &:hover
+          .blog-title
+            color: $red
+    .blog-title
+      margin: 0 0 5px
+
+
+
+.blog-foo
+  width: 100%
+  height: auto
+  border-top: 1px solid $light-grey
+  padding-top: 15px
+  margin-top: 22px
+  display: flex
+  a
+    color: $grey
+    font-weight: bold
+    line-height: 24px
+    text-decoration: none
+    position: relative
+    display: flex
+    padding-left: 25px
+    &:before
+      content: ''
+      position: absolute
+      top: 50%
+      left: 0
+      transform: translateY(-50%)
+      background-repeat: no-repeat
+      background-position: center
+    span
+      margin-right: 8px
+
+  .comments
+    margin-right: auto
+    &:before
+      width: 17px
+      height: 13px
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='17px' height='13px'%3E%3Cpath fill-rule='evenodd' fill='rgb(136, 136, 136)' d='M9.027,0.019 C13.477,0.019 16.190,2.117 16.190,5.323 C16.190,8.529 13.477,11.025 9.027,11.025 C8.485,11.025 7.955,10.986 7.443,10.913 C5.371,13.532 1.985,12.959 1.985,12.959 C4.293,11.867 4.348,10.252 3.938,10.011 C2.126,8.947 0.969,7.326 0.969,5.511 C0.969,2.305 4.577,0.019 9.027,0.019 Z'/%3E%3C/svg%3E")
+
+  .category
+    &:before
+      width: 18px
+      height: 16px
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='18px' height='16px'%3E%3Cpath fill-rule='evenodd' fill='rgb(136, 136, 136)' d='M17.459,10.504 L12.823,15.543 C12.421,15.944 11.284,16.170 10.808,15.914 C10.703,15.857 16.246,9.788 16.246,9.788 C16.246,9.788 17.081,8.446 15.865,7.680 L8.725,0.991 C8.725,0.991 10.318,0.970 10.760,1.333 L17.057,6.913 C17.940,7.737 18.440,9.111 17.459,10.504 ZM14.443,10.340 L9.676,15.636 C9.186,16.127 8.391,16.127 7.900,15.636 L1.156,8.016 C0.742,7.955 1.140,0.971 1.140,0.971 C1.140,0.971 6.784,0.742 7.265,1.223 L14.887,8.119 C15.731,8.669 15.110,9.574 14.443,10.340 ZM4.441,2.536 C3.929,2.023 3.099,2.023 2.587,2.536 C2.074,3.048 2.074,3.878 2.587,4.390 C3.099,4.902 3.929,4.902 4.441,4.390 C4.953,3.878 4.953,3.048 4.441,2.536 Z'/%3E%3C/svg%3E")
+
+  .likes
+    margin-left: 55px
+    &:before
+      width: 16px
+      height: 14px
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='16px' height='14px'%3E%3Cpath fill-rule='evenodd' fill='rgb(136, 136, 136)' d='M15.812,5.211 C14.652,9.194 8.000,14.000 8.000,14.000 C8.000,14.000 1.348,9.194 0.188,5.211 C0.066,4.829 -0.000,4.422 -0.000,4.000 C-0.000,1.791 2.291,-0.000 4.500,-0.000 C7.463,-0.000 8.000,3.000 8.000,3.000 C8.000,3.000 7.998,3.000 8.000,3.000 C8.525,1.536 9.823,-0.000 11.500,-0.000 C13.709,-0.000 16.000,1.791 16.000,4.000 C16.000,4.422 15.933,4.829 15.812,5.211 Z'/%3E%3C/svg%3E")
+    @media (max-width: 576px)
+      margin-left: 15px
+
+.blog-detail
+  width: 100%
+  height: auto
+  padding-bottom: 70px
+
+  .blog-content
+    align-items: center
+    margin-bottom: 22px
+    .blog-title
+      line-height: 28px
+      margin: 0
+    .blog-date
+      margin-right: 35px
+
+  .blog-detail-text
+    line-height: 24px
+    color: $grey
+
+  .blog-detail-text-note
+    padding: 25px
+    font-weight: bold
+    color: $grey
+    border: 1px solid $light-grey
+    border-left: 2px solid $red
+
+  .blog-comments
+    width: 100%
+    height: auto
+  .blog-comments-header
+    width: 100%
+    height: 80px
+    display: flex
+    justify-content: space-between
+    align-items: center
+    h5
+      margin: 0
+    .btn-comment-leave
+      margin-top: 0
+      padding-right: 0
+
+  .blog-page__list--item
+    margin-bottom: 0
+
+  .blog-foo
+    padding-bottom: 15px
+    border-bottom: 1px solid $light-grey
+
+  .btns
+    padding: 25px 0
+    border-bottom: 1px solid $light-grey
+
+#form-comment-leave
+  .input-name,
+  .input-email
+    &:after
+      right: 5px
+
